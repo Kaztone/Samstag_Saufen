@@ -1,0 +1,22 @@
+<label for="addItemInput"><h2>Gebe die Spieler an!</h2></label>
+<br>
+<input
+  #newItem
+  placeholder="Spielername..."
+  (keyup.enter)="addItem(newItem.value); newItem.value = ''"
+  class="lg-text-input"
+  id="addItemInput"
+/>
+
+<button class="btn-primary" (click)="addItem(newItem.value)">Hinzufügen</button>
+
+<div class="main">
+    <h1>Die Spieler</h1>
+    
+  
+    <ul>
+      <li *ngFor="let item of items">{{item.description}}</li>
+    </ul>
+  </div>
+  <a routerLink="/flip" routerLinkActive="active">Starten mit Saufen!</a>
+  

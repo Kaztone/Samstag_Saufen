@@ -1,0 +1,16 @@
+<div>
+    <h1>Saufen !</h1>
+    <div>
+        <p>Lass uns die Spiele beginnen!</p>
+    </div>
+</div>
+<div class="container">
+    <div [ngClass]="toggleProperty ? 'flipped': ''" class="card">
+        <div class="front" (click)="toggle()">Saufeeen!
+            <ng-content select="flip-card-front"></ng-content>
+        </div>
+        <div class="back" (click)="toggle()">Sauf jetzt noch mehr!
+            <ng-content select="flip-card-back"></ng-content> 
+        </div>
+    </div>
+</div>
